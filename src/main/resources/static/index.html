@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Principal</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--JQUERY-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7qFzflZQ631DG1OkbkFrCc70yI4uI7qw"></script>
+	
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<script src="js/apiUsuario.js"></script>
+<script src="js/usuario.js"></script>
+
+</head>
+<body onload="usuarioActions.verTiendas()">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<center>
+			<a class="navbar-brand" href="index.html" color="#E70A0A">Tiendas</a>
+			<a class="navbar-brand" href="registrar.html" color="#E70A0A">Registrarse</a>
+		</center>
+	</nav>
+
+	<center>
+		<font face="Arial Black" size=25 color="#E70A0A">Listas de
+			Tiendas</font>
+	</center>
+	<div class="conta"></div>
+
+	<div class="card" style="margin: 80px 0 0 180px; width: 40rem;">
+		<img class="card-img-top" src="/file/img/card.jpg"
+			alt="Card image cap" width="600" height="150">
+		<div class="card-body">
+			<table class="table table-bordered" id="tiendas">
+				<thead>
+					<tr class="bg-danger">
+						<th scope="col">Nombre del Establecimiento</th>
+						<th scope="col">Dirección</th>
+						<th scope="col">Ciudad</th>
+						<th scope="col">Ver ubicación</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</body>
+</html>
