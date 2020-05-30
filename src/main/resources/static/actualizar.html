@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Principal</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--JQUERY-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+
+<script
+	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+	
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<script src="js/apiUsuario.js"></script>
+<script src="js/usuario.js"></script>
+
+</head>
+<body onload="usuarioActions.proceso()">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<center>
+			<a class="navbar-brand" href="index.html" color="#E70A0A">Tiendas</a>
+			<a class="navbar-brand" href="registrar.html" color="#E70A0A">Registrarse</a>
+		</center>
+	</nav>
+
+	<center>
+		<font face="Arial Black" size=25 color="#E70A0A">Actualización de Información</font>
+	</center>
+
+	<div class="card" style="margin: 80px 0 0 180px; width: 40rem;">
+		<div class="card-body">
+			<center>
+				<h3 id="textoTitulos">¡Actualiza tu Información!</h3>
+				<h3 id="textoTitulos">actualiza la informacion para tu usuario</h3>
+				<h5>Solo sobrescriba los datos que vea necesarios</h5>
+			</center>
+			<br></br>
+			<form class="form" role="form" autocomplete="off"
+				action='javascript:usuarioActions.update()'>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Nombre
+						del Establecimiento</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="establecimiento" value="">
+						<label id="infestab"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Primer
+						Nombre</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="nombre1" value="">
+						<label id="infnom1"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Segundo
+						Nombre</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" id="nombre2" value="">
+						<label id="infnom2"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Primer
+						Apellido</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="apellido1" value="">
+						<label id="infap1"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Segundo
+						Apellido</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="apellido2" value="">
+						<label id="infap2"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Departamento</label>
+					<div class="col-lg-9">
+						<select class="form-control" id="depto" value="">
+							<option>Seleccione...</option>
+							<option>AMAZONAS</option>
+							<option>ANTIOQUIA</option>
+							<option>ARAUCA</option>
+							<option>ARCHIPIELAGO D</option>
+							<option>ATLANTICO</option>
+							<option>BOGOTÁ D.C.</option>
+							<option>BOLIVAR</option>
+							<option>BOYACA</option>
+							<option>CALDAS</option>
+							<option>AMAZONAS</option>
+							<option>CAQUETA</option>
+							<option>CASANARE</option>
+							<option>CHOCO</option>
+							<option>CORDOBA</option>
+							<option>CUNDINAMARCA</option>
+							<option>GUAINIA</option>
+							<option>GUAVIARE</option>
+							<option>HUILA</option>
+							<option>LA GUAJIRA</option>
+							<option>MAGDALENA</option>
+							<option>META</option>
+							<option>NORTE DE SANTANDER</option>
+							<option>PUTUMAYO</option>
+							<option>QUINDIO</option>
+							<option>RISARALDA</option>
+							<option>SANTANDER</option>
+							<option>SUCRE</option>
+							<option>TOLIMA</option>
+							<option>VALLE DEL CAUCA</option>
+							<option>VAUPES</option>
+							<option>VICHADA</option>
+						</select>
+						<label id="infdp"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Ciudad:</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="ciudad" value="">
+						<label id="infcd"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Dirección:</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" required="required"
+							id="direccion" value="">
+						<label id="infdir"></label>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-lg-3 col-form-label form-control-label">Estrato</label>
+					<div class="col-lg-9">
+						<select class="form-control" id="estrato" value="">
+							<option>seleccione...</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+						</select>
+						<label id="infest"></label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-lg-12 text-center">
+						<input type="submit" class="btn btn-primary" value="Actualizar">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

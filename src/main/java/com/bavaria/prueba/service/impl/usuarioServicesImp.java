@@ -62,10 +62,10 @@ public class usuarioServicesImp implements usuarioServices{
 	 * @param datos a actulizar del usuario
 	 */
 	@Override
-	public void updateUser(String establecimiento, String nombre1, String nombre2, String apellido1, String apellido2,
+	public void updateUser(String email,String establecimiento, String nombre1, String nombre2, String apellido1, String apellido2,
 			String departamento, String ciudad, String direccion, int estrato) {
 		getConnection();
-		usuarioPer.updateUser(establecimiento, nombre1, nombre2, apellido1, apellido2, departamento, ciudad, direccion, estrato);
+		usuarioPer.updateUser(email,establecimiento, nombre1, nombre2, apellido1, apellido2, departamento, ciudad, direccion, estrato);
 	}
 
 }

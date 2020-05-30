@@ -55,7 +55,7 @@ public class usuarioController {
 	 */
 	@RequestMapping(method = RequestMethod.PUT,path="/update")
 	public void updateUser(@RequestBody usuario user) {
-		usuarioServ.updateUser(user.getEstablecimiento(), user.getNombre1(), user.getNombre2(), user.getApellido1(), user.getApellido2(), user.getDepartamento(), user.getCiudad(), user.getDireccion(), user.getEstrato());
+		usuarioServ.updateUser(user.getEmail(),user.getEstablecimiento(), user.getNombre1(), user.getNombre2(), user.getApellido1(), user.getApellido2(), user.getDepartamento(), user.getCiudad(), user.getDireccion(), user.getEstrato());
 	}
 	
 

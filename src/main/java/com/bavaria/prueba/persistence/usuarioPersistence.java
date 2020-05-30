@@ -129,7 +129,7 @@ public class usuarioPersistence {
 	 * Actualiza la informacion del usuario 
 	 * @param datos a actulizar del usuario
 	 */
-	public void updateUser(String establecimiento, String nombre1, String nombre2,
+	public void updateUser(String email,String establecimiento, String nombre1, String nombre2,
 			String apellido1, String apellido2,String departamento,String ciudad,String direccion,int estrato) {
 		Statement stmt = null;
 		try {
@@ -139,7 +139,7 @@ public class usuarioPersistence {
 			con.setAutoCommit(false);
 			stmt = con.createStatement();
 			String consult = "update usuario set establecimiento = '"+establecimiento+"',nombre1 ='"+nombre1+"',nombre2='"+nombre2+"',apellido1 ='"+apellido1+"',apellido2 = '"+apellido2+"',departamento='"+departamento+"',ciudad='"+ciudad
-					+"',direccion = '"+direccion+"',estrato='"+estrato+"');";
+					+"',direccion = '"+direccion+"',estrato='"+estrato+"' where email = '"+ email +"'";
 			stmt.executeUpdate(consult);
             stmt.close();
             con.commit();

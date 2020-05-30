@@ -40,7 +40,7 @@ var apiUsuario = (function() {
 			})
 		},
 		updateUser : function(usuario) {
-			jQuey.ajax({
+			jQuery.ajax({
 				url : "/usuario/update",
 				type : "PUT",
 				data : JSON.stringify(usuario),
