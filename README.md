@@ -6,7 +6,7 @@ Jimmy Armando Chirivi Nivia
 
 ## Descripcion
 
-Registar y Actualizar una tienda con su respectiva información además de poder mostrar en tiempo real la ubicación en mapa de cierta tienda
+Registar y Actualizar una tienda con su respectiva información además de poder mostrar en tiempo real la ubicación en mapa de cierta tienda y ver información del la tienda en el mapa.
 
 ## Tecnolgias de Desarrollo
 
