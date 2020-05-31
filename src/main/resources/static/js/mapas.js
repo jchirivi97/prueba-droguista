@@ -41,13 +41,9 @@ function verUbicacion() {
 								marker = new google.maps.Marker({
 									map : maps,
 									position : results[0].geometry.location,
-									title: "Tienda: "+datos.establecimiento
-								});
-								var infowindow = new google.maps.InfoWindow({
-									content : informacion
-								});
-								marker.addListener('click',function(){
-									informacion.open(maps,marker);
+									title: "Tienda: "+datos.establecimiento 
+									+"\n "+"Dirección: " + datos.direccion  
+									+"\n "+"Propietario: " + datos.nombre1 + " " + datos.apellido1
 								});
 							}
 						});		
